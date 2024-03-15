@@ -23,7 +23,7 @@ int sumaNumeros(const string& cadena, int n) {
     return total;
 }
 
-int main() {
+int Ejercicio9() {
     int n;
     string cadenaNumerica;
 
