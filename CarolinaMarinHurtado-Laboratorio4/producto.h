@@ -2,21 +2,32 @@
 #define PRODUCTO_H
 
 #include <iostream>
-using namespace std;
+#include <string>
 
-class producto
-{
-  private:
-    string nombre;
-    string marca;
+class Producto {
+protected:
+    std::string nombre;
+    std::string marca;
     int precio;
-    int cantidadInventario;
     int descuento;
+    int cantidad;
 
-  public:
-    producto(string nombre, string marca, int precio, int cantidadInventario, int descuento);
-    string getNombre();
-    void setNombre(string nombre);
-   };
+public:
+    Producto(std::string nombre, std::string marca, int precio, int descuento, int cantidad);
 
-#endif // PRODUCTO_H
+    std::string getNombre();
+    std::string getMarca();
+    int getPrecio();
+    int getDescuento();
+    int getCantidad();
+
+    void setNombre(std::string nombre);
+    void setMarca(std::string marca);
+    void setPrecio(int precio);
+    void setDescuento(int descuento);
+    void setCantidad(int cantidad);
+
+    virtual void imprimirInformacion() = 0;
+};
+
+#endif

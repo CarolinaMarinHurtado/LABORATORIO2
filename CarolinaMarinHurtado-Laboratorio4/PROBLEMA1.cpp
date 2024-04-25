@@ -1,5 +1,0 @@
-
-
-void PROBLEMA1 () {
-
-}

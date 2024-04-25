@@ -1,16 +1,25 @@
 #ifndef ASEO_H
 #define ASEO_H
 
-#include "producto.h"
 
-class aseo : public producto {
+#include <string>
+#include <iostream>
+
+class Aseo {
 private:
-    string material;
+    std::string nombre;
+    std::string marca;
+    int precio;
+    int descuento;
+    int cantidad;
+    std::string material;
 
 public:
-    aseo(string nombre, string marca, int precio, int cantidadInventario, int descuento, string material);
-    string getMaterial();
+    Aseo(std::string nombre, std::string marca, int precio, int descuento, int cantidad, std::string material);
+
+    // Métodos getter y setter para los atributos
+
+    void imprimirInformacion();
 };
 
-
-#endif // ASEO_H
+#endif

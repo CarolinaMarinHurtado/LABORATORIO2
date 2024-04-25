@@ -14,6 +14,8 @@ private:
     std::string clave;
 
 public:
+    CuentaCorriente(const std::string& nombre, const std::string& apellidos, const std::string& direccion, const std::string& telefono, const std::string& numeroIdentificacion, double saldo, const std::string& clave);
+
     std::string getNombre() const;
     void setNombre(const std::string& nombre);
 
@@ -32,7 +34,8 @@ public:
     double getSaldo() const;
     void setSaldo(double saldo);
 
-    bool claveValida();
+    std::string getClave() const;
+    void setClave(const std::string& clave);
 };
 
 #endif // CUENTACORRIENTE_H

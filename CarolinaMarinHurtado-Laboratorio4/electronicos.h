@@ -1,17 +1,24 @@
-#ifndef ELECTRONICOS_H
-#define ELECTRONICOS_H
+#ifndef ELECTRONICO_H
+#define ELECTRONICO_H
 
-#include "producto.h"
 #include <string>
-#include<iostream>
+#include <iostream>
 
-class Electronicos : public producto {
+class Electronico {
 private:
+    std::string nombre;
+    std::string marca;
+    int precio;
+    int descuento;
+    int cantidad;
     int garantia;
 
 public:
-    Electronicos(string nombre, string marca, int precio, int cantidadInventario, int descuento, int garantia);
-        int getGarantia();
+    Electronico(std::string nombre, std::string marca, int precio, int descuento, int cantidad, int garantia);
+
+    // Métodos getter y setter para los atributos
+
+    void imprimirInformacion();
 };
 
-#endif // ELECTRONICOS_H
+#endif

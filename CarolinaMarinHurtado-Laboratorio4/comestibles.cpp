@@ -1,17 +1,12 @@
 #include "comestibles.h"
 
-// Implementación del constructor
-Comestibles::Comestibles(string nombre, string marca, int precio, int cantidadInventario, int descuento, string fechaVencimiento)
-{
-    // Implementación del constructor
+Comestibles::Comestibles(std::string nombre, std::string marca, int precio, int cantidadInventario, int descuento, std::string fechaVencimiento)
+    : nombre(nombre), marca(marca), precio(precio), cantidadInventario(cantidadInventario), descuento(descuento), fechaVencimiento(fechaVencimiento) {}
+
+void Comestibles::mostrarInformacion() {
+    // Implementación para mostrar información de comestibles
 }
 
-// Implementación del método para obtener la fecha de vencimiento
-string Comestibles::getFechaVencimiento(){
-    return fechaVencimiento;
-}
-
-// Implementación del método para establecer la fecha de vencimiento
-void Comestibles::setFechaVencimiento(string nuevaFechaVencimiento){
-    fechaVencimiento = nuevaFechaVencimiento;
+void Comestibles::disminuirInventario(int cantidad) {
+    // Implementación para disminuir inventario de comestibles
 }

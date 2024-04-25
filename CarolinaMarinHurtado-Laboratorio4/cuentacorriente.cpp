@@ -1,5 +1,14 @@
 #include "cuentacorriente.h"
-#include <iostream>
+
+CuentaCorriente::CuentaCorriente(const std::string& nombre, const std::string& apellidos, const std::string& direccion, const std::string& telefono, const std::string& numeroIdentificacion, double saldo, const std::string& clave) {
+    this->nombre = nombre;
+    this->apellidos = apellidos;
+    this->direccion = direccion;
+    this->telefono = telefono;
+    this->numeroIdentificacion = numeroIdentificacion;
+    this->saldo = saldo;
+    this->clave = clave;
+}
 
 std::string CuentaCorriente::getNombre() const {
     return nombre;
@@ -49,25 +58,10 @@ void CuentaCorriente::setSaldo(double saldo) {
     this->saldo = saldo;
 }
 
-bool CuentaCorriente::claveValida() {
-    std::string numeroDocumento;
-    std::string claveIngresada;
+std::string CuentaCorriente::getClave() const {
+    return clave;
+}
 
-    std::cout << "Ingrese el número de documento: ";
-    std::cin >> numeroDocumento;
-
-    if (numeroDocumento == numeroIdentificacion) {
-        std::cout << "Ingrese la clave anterior: ";
-        std::cin >> claveIngresada;
-
-        if (claveIngresada == clave) {
-            return true;
-        } else {
-            std::cout << "Clave incorrecta." << std::endl;
-            return false;
-        }
-    } else {
-        std::cout << "Número de documento incorrecto." << std::endl;
-        return false;
-    }
+void CuentaCorriente::setClave(const std::string& clave) {
+    this->clave = clave;
 }

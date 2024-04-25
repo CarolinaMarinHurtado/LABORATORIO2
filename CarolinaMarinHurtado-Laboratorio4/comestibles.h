@@ -1,21 +1,21 @@
 #ifndef COMESTIBLES_H
 #define COMESTIBLES_H
 
-#include "producto.h"
 #include <string>
-#include <iostream>
 
-using namespace std;
-
-class Comestibles : public producto {
+class Comestibles {
 private:
-    string fechaVencimiento;
+    std::string nombre;
+    std::string marca;
+    int precio;
+    int cantidadInventario;
+    int descuento;
+    std::string fechaVencimiento;
 
 public:
-    Comestibles(string nombre, string marca, int precio, int cantidadInventario, int descuento, string fechaVencimiento);
-    string getFechaVencimiento();
-    void setFechaVencimiento(string fechaVencimiento);
-
+    Comestibles(std::string nombre, std::string marca, int precio, int cantidadInventario, int descuento, std::string fechaVencimiento);
+    void mostrarInformacion();
+    void disminuirInventario(int cantidad);
 };
 
-#endif // COMESTIBLES_H
+#endif
