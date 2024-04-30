@@ -12,6 +12,13 @@ private:
     std::string modelo;
 
 public:
+    Electronico() {
+            nombre = "Sin nombre";
+            marca = "Sin marca";
+            precio = 0;
+            cantidad = 0;
+            modelo = "Sin modelo";
+        }
     Electronico(std::string nombre, std::string marca, int precio, int cantidad, std::string modelo);
 
     void setNombre(std::string nombre);

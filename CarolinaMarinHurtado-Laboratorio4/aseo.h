@@ -13,8 +13,16 @@ private:
     std::string material;
 
 public:
-    Aseo(std::string nombre, std::string marca, int precio, int cantidad, int descuento, std::string material);
-    // Setters y getters para los atributos
+    Aseo(std::string nombre, std::string marca, int precio, int cantidad, int descuento, std::string material){
+        this->nombre = nombre;
+        this->marca = marca;
+        this->precio = precio;
+        this->cantidad= cantidad;
+        this->descuento = descuento;
+        this->material = material;
+
+    };
+
     void setNombre(std::string nombre);
     std::string getNombre();
     void setMarca(std::string marca);

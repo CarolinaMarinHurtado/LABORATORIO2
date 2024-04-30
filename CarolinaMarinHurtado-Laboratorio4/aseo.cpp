@@ -1,5 +1,7 @@
 #include "aseo.h"
 
+
+
 Aseo::Aseo(std::string nombre, std::string marca, int precio, int cantidad, int descuento, std::string material) {
     this->nombre = nombre;
     this->marca = marca;
@@ -8,6 +10,9 @@ Aseo::Aseo(std::string nombre, std::string marca, int precio, int cantidad, int 
     this->descuento = descuento;
     this->material = material;
 }
+
+// Resto de los métodos de la clase
+
 
 void Aseo::setNombre(std::string nombre) {
     this->nombre = nombre;
