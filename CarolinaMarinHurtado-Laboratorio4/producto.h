@@ -1,33 +1,27 @@
 #ifndef PRODUCTO_H
 #define PRODUCTO_H
 
-#include <iostream>
 #include <string>
 
 class Producto {
-protected:
+private:
     std::string nombre;
     std::string marca;
     int precio;
-    int descuento;
     int cantidad;
 
 public:
-    Producto(std::string nombre, std::string marca, int precio, int descuento, int cantidad);
-
-    std::string getNombre();
-    std::string getMarca();
-    int getPrecio();
-    int getDescuento();
-    int getCantidad();
+    Producto(std::string nombre, std::string marca, int precio, int cantidad);
 
     void setNombre(std::string nombre);
+    std::string getNombre();
     void setMarca(std::string marca);
+    std::string getMarca();
     void setPrecio(int precio);
-    void setDescuento(int descuento);
+    int getPrecio();
     void setCantidad(int cantidad);
+    int getCantidad();
 
-    virtual void imprimirInformacion() = 0;
 };
 
 #endif

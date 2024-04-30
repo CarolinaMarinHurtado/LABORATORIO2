@@ -2,23 +2,29 @@
 #define ELECTRONICO_H
 
 #include <string>
-#include <iostream>
 
 class Electronico {
 private:
     std::string nombre;
     std::string marca;
     int precio;
-    int descuento;
     int cantidad;
-    int garantia;
+    std::string modelo;
 
 public:
-    Electronico(std::string nombre, std::string marca, int precio, int descuento, int cantidad, int garantia);
+    Electronico(std::string nombre, std::string marca, int precio, int cantidad, std::string modelo);
 
-    // Métodos getter y setter para los atributos
+    void setNombre(std::string nombre);
+    std::string getNombre();
+    void setMarca(std::string marca);
+    std::string getMarca();
+    void setPrecio(int precio);
+    int getPrecio();
+    void setCantidad(int cantidad);
+    int getCantidad();
+    void setModelo(std::string modelo);
+    std::string getModelo();
 
-    void imprimirInformacion();
 };
 
 #endif

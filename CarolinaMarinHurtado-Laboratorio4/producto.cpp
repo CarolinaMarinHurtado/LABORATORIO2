@@ -1,50 +1,40 @@
 #include "producto.h"
-using namespace std;
 
-Producto::Producto(string nombre, string marca, int precio, int descuento, int cantidad) {
+Producto::Producto(std::string nombre, std::string marca, int precio, int cantidad) {
     this->nombre = nombre;
     this->marca = marca;
     this->precio = precio;
-    this->descuento = descuento;
     this->cantidad = cantidad;
 }
 
-string Producto::getNombre() {
-    return nombre;
-}
-
-string Producto::getMarca() {
-    return marca;
-}
-
-int Producto::getPrecio() {
-    return precio;
-}
-
-int Producto::getDescuento() {
-    return descuento;
-}
-
-int Producto::getCantidad() {
-    return cantidad;
-}
-
-void Producto::setNombre(string nombre) {
+void Producto::setNombre(std::string nombre) {
     this->nombre = nombre;
 }
 
-void Producto::setMarca(string marca) {
+std::string Producto::getNombre() {
+    return nombre;
+}
+
+void Producto::setMarca(std::string marca) {
     this->marca = marca;
+}
+
+std::string Producto::getMarca() {
+    return marca;
 }
 
 void Producto::setPrecio(int precio) {
     this->precio = precio;
 }
 
-void Producto::setDescuento(int descuento) {
-    this->descuento = descuento;
+int Producto::getPrecio() {
+    return precio;
 }
 
 void Producto::setCantidad(int cantidad) {
     this->cantidad = cantidad;
+}
+
+int Producto::getCantidad() {
+    return cantidad;
 }

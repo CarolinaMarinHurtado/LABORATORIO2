@@ -14,8 +14,18 @@ private:
 
 public:
     Comestibles(std::string nombre, std::string marca, int precio, int cantidadInventario, int descuento, std::string fechaVencimiento);
-    void mostrarInformacion();
-    void disminuirInventario(int cantidad);
+    void setNombre(std::string nombre);
+        std::string getNombre();
+    void setMarca(std::string marca);
+        std::string getMarca();
+    void setPrecio(int precio);
+         int getPrecio();
+    void setDescuento(int descuento);
+         int getDescuento();
+    void setCantidad(int cantidad);
+         int getCantidad();
+     void setFechaVencimiento(std::string fechaVencimiento);
+        std::string getFechaVencimiento();
 };
 
 #endif
