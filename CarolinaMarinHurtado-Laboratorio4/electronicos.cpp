@@ -9,8 +9,8 @@ Electronico::Electronico(std::string nombre, std::string marca, int precio, int 
     this->garantia = garantia;
 }
 
-// Implementación de los métodos getter y setter
+
 
 void Electronico::imprimirInformacion() {
-    // Lógica para imprimir la información del producto en la consola
+
 }

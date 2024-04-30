@@ -1,6 +1,7 @@
 #include "producto.h"
+using namespace std;
 
-Producto::Producto(std::string nombre, std::string marca, int precio, int descuento, int cantidad) {
+Producto::Producto(string nombre, string marca, int precio, int descuento, int cantidad) {
     this->nombre = nombre;
     this->marca = marca;
     this->precio = precio;
@@ -8,11 +9,11 @@ Producto::Producto(std::string nombre, std::string marca, int precio, int descue
     this->cantidad = cantidad;
 }
 
-std::string Producto::getNombre() {
+string Producto::getNombre() {
     return nombre;
 }
 
-std::string Producto::getMarca() {
+string Producto::getMarca() {
     return marca;
 }
 
@@ -28,11 +29,11 @@ int Producto::getCantidad() {
     return cantidad;
 }
 
-void Producto::setNombre(std::string nombre) {
+void Producto::setNombre(string nombre) {
     this->nombre = nombre;
 }
 
-void Producto::setMarca(std::string marca) {
+void Producto::setMarca(string marca) {
     this->marca = marca;
 }
 

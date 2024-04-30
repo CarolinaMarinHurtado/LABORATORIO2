@@ -1,74 +1,64 @@
 #include <iostream>
-
-// Clases Producto, Comestibles, Electronicos, Aseo
+using namespace std;
 
 class CuentaCorriente {
 private:
-    std::string numeroIdentificacion;
-    std::string clave;
+    string numeroIdentificacion;
+    string clave;
     double saldo;
 
 public:
-    CuentaCorriente(std::string numeroIdentificacion, std::string clave, double saldo = 0.0)
+    CuentaCorriente(string numeroIdentificacion, string clave, double saldo = 0.0)
         : numeroIdentificacion(numeroIdentificacion), clave(clave), saldo(saldo) {
         if (clave.empty()) {
             this->clave = "12345";
         }
     }
 
-    bool validarCuenta(std::string numeroIdentificacion, std::string clave) {
-        // Implementación para validar la cuenta
+    bool validarCuenta(string numeroIdentificacion, string clave) {
+
     }
 
-    void modificarClave(std::string numeroIdentificacion, std::string claveAnterior, std::string nuevaClave) {
-        // Implementación para modificar la clave
+    void modificarClave(string numeroIdentificacion, string claveAnterior, string nuevaClave) {
+
     }
 
-    // Resto de métodos de la clase CuentaCorriente
+
 };
 
 class Tienda {
 public:
     void realizarCompra(CuentaCorriente& cuenta) {
-        // Implementación para realizar la compra
+
     }
 
     void agregarProducto(Producto* producto) {
-        // Implementación para agregar un producto a la tienda
+
     }
 
-    void modificarProducto(/* parámetros */) {
-        // Implementación para modificar un producto en la tienda
+    void modificarProducto(/* tengo que hacer los parámetros */) {
+
     }
 };
 
 int main() {
-    // Crear una instancia de la clase CuentaCorriente
+
     CuentaCorriente cuenta(/* parámetros del constructor */);
 
-    // Crear una instancia de la tienda
-    Tienda tienda;
 
-    // Cargar datos iniciales de los productos
-    Comestibles comestible1("Arroz", "Marca1", 100, 50, 10, "2024-12");
-    Electronicos electronico1("Teléfono", "Marca2", 5000, 10, 5, 12);
-    Aseo aseo1("Jabón", "Marca3", 50, 100, 15, "Plástico");
 
-    tienda.agregarProducto(&comestible1);
-    tienda.agregarProducto(&electronico1);
-    tienda.agregarProducto(&aseo1);
 
     // Menú principal
     int opcion;
     do {
-        std::cout << "Menú principal:" << std::endl;
-        std::cout << "1. Agregar productos" << std::endl;
-        std::cout << "2. Modificar nombres, precios o % descuento" << std::endl;
-        std::cout << "3. Realizar compra" << std::endl;
-        std::cout << "4. Modificar clave de cuenta" << std::endl;
-        std::cout << "5. Salir" << std::endl;
-        std::cout << "Ingrese una opción: ";
-        std::cin >> opcion;
+        cout << "Menú principal:" <<endl;
+        cout << "1. Agregar productos" <<endl;
+        cout << "2. Modificar nombres, precios o % descuento" <<endl;
+        cout << "3. Realizar compra" << std::endl;
+        cout << "4. Modificar clave de cuenta" << std::endl;
+        cout << "5. Salir" << std::endl;
+        cout << "Ingrese una opción: ";
+        cin >> opcion;
 
         switch (opcion) {
             case 1: {
@@ -95,7 +85,7 @@ int main() {
                 break;
             }
             case 5:
-                std::cout << "Saliendo del programa..." << std::endl;
+                cout << "Saliendo del programa..." endl;
                 break;
             default:
                 std::cout << "Opción inválida. Intente nuevamente." << std::endl;
